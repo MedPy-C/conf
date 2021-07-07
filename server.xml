@@ -137,7 +137,6 @@
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
 
       </Host>
-      <Valve className="org.apache.catalina.valves.RemoteIpValve" />
     </Engine>
   </Service>
 </Server>
