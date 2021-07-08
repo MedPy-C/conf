@@ -132,12 +132,14 @@
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html
              Note: The pattern used is equivalent to using pattern="common" -->
+        <Valve className="org.apache.catalina.valves.RemoteIpValve"
+               remoteIpHeader="X-Forwarded-For"
+               requestAttributesEnabled="true"
+               internalProxies="192\.168\.10\.139|127\.0\.0\.1|192\.168\.151\.101"  />
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
                prefix="localhost_access_log" suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
-
       </Host>
-      <Valve className="org.apache.catalina.valves.RemoteIpValve" />
     </Engine>
   </Service>
 </Server>
