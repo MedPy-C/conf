@@ -136,6 +136,7 @@
                prefix="localhost_access_log" suffix=".txt"
                pattern="%h %l %u %t &quot;%r&quot; %s %b" />
       </Host>
+      
       <Valve className="org.apache.catalina.valves.RemoteIpValve"
                remoteIpHeader="X-Forwarded-For"
                requestAttributesEnabled="true"
