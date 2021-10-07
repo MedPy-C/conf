@@ -1,0 +1,1 @@
+CATALINA_OPTS="-Xms1536m -Xmx4096m"
